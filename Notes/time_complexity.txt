@@ -1,0 +1,14 @@
+Tc of algorithm: 
+Sum of frequency count of each instruction that is, number of CPU computations.
+
+
+
+
+Example:                         Frequencies
+
+sum = 0                -------   (1)
+for i in range(0,n+1): -------   (2n+1 ---- n increments, n+1 comparisions)
+	sum+=i  			   (n)
+return sum				   (1)
+
+			total --- =    (3n+4) === O(n) - Degree of 3n+4

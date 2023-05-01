@@ -1,0 +1,23 @@
+1) Space Reqd by variables
+2) Space Reqd by data structures used
+3) Space Reqd by stack used in recursive algorithm
+
+Example:
+
+n = 5
+arr =  array of size n
+sum = 0 
+for i in range(0,n+1):
+	sum= sum + arr[i]
+return sum
+
+
+spaces = i(1) , sum(1) , n(1) , arr(n) 
+       = n+3
+
+sc =  O(n)
+
+
+
+
+
