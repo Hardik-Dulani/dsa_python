@@ -1,0 +1,46 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        
+    def append(self, data):
+        new_node = Node(data)
+        
+        if self.head is None:
+            self.head = new_node
+            return
+        
+        curr_node = self.head
+        while curr_node.next is not None:
+            curr_node = curr_node.next
+        
+        curr_node.next = new_node
+        
+    def get_head(self):
+        return self.head
+
+
+In this example, the Node class represents a single node in the linked list, and contains a data attribute to store the node's value and a next attribute to store a reference to the next node in the list.
+
+The LinkedList class represents the linked list itself, and contains a head attribute to store a reference to the first node in the list. The append method adds a new node to the end of the list, and the get_head method returns a reference to the head node.
+
+Here's an example of how you might use this implementation to create a linked list and access the head node:
+
+# Create a new linked list
+my_list = LinkedList()
+
+# Add some nodes to the list
+my_list.append(5)
+my_list.append(9)
+my_list.append(12)
+my_list.append(8)
+
+# Get a reference to the head node
+head_node = my_list.get_head()
+
+# Print the value of the head node
+print(head_node.data)  # Output: 5

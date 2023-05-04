@@ -12,3 +12,7 @@ for i in range(0,n+1): -------   (2n+1 ---- n increments, n+1 comparisions)
 return sum				   (1)
 
 			total --- =    (3n+4) === O(n) - Degree of 3n+4
+
+
+Best to worst time complexity:
+O(1) < O(logN) < O(n**1/2) < O(N) < O(nLogn) < O(n**2) < O(n**3) < O(2**n) < O(n!) < O(N**N)

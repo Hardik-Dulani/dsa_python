@@ -1,0 +1,6 @@
+Instance/Object attributes:
+Attributes that vary from object to object of same class in terms of values
+
+
+Class Attributes:
+Common attribute for all the objects in a class, It can be changed for a specific object but It won't affect other instances

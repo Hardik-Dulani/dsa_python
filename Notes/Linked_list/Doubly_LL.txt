@@ -1,0 +1,96 @@
+In a singly linked list, you can only traverse the list by starting at the head node and following the next pointers until you reach the desired node. This means that if you want to access an element in the middle of the list, you will need to start at the head node and iterate through the list until you reach the desired node.
+
+However, if you know the position of the node you want to access, you can use a different type of linked list called a doubly linked list to access elements more efficiently. In a doubly linked list, each node contains references to both the previous and next nodes in the list, allowing you to traverse the list in both directions.
+
+Here's an example of a doubly linked list implementation in Python:
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None
+        self.next = None
+        
+
+
+# Create a new doubly linked list with few basic functions!
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+    def insert(self, data):
+        new_node = Node(data)
+        
+        if self.head is None:
+            self.head = new_node
+            self.tail = new_node
+            new_node.prev = None
+            new_node.next = None
+            return
+        
+        new_node.prev = self.tail
+        self.tail.next = new_node
+        self.tail = new_node
+        
+    def delete(self, data):
+        curr_node = self.head
+        while curr_node is not None:
+            if curr_node.data == data:
+                if curr_node.prev is None:
+                    self.head = curr_node.next
+                else:
+                    curr_node.prev.next = curr_node.next
+                if curr_node.next is not None:
+                    curr_node.next.prev = curr_node.prev
+                del curr_node
+                return
+            curr_node = curr_node.next
+    def get_list(self):
+        curr_node = self.head
+        
+        while curr_node is not None:
+            print(curr_node.data)
+            curr_node =  curr_node.next
+        return True
+    def take_input(self):
+        input_data = [int(i) for i in input().split()]
+        for i in input_data:
+            self.insert(i)
+    def get_len(self):
+        count = 0
+        curr = self.head
+        while curr is not None:
+            count+=1
+            curr = curr.next
+        return count
+    def get_node(self,index):
+        curr = self.head
+        i=0
+        while i<index  and curr.next is not None:
+            curr = curr.next
+            i+=1
+        return curr.data
+
+
+    def insert_at_i(self, i, data):
+        new_node = Node(data)
+        if i == 1:
+            new_node.next = self.head
+            self.head = new_node
+            return
+        
+        curr_node = self.head
+        for j in range(i-2):
+            if curr_node is None:
+                print("Invalid position specified")
+                return
+            curr_node = curr_node.next
+        
+        if curr_node is None:
+            print("Invalid position specified")
+            return
+        
+        new_node.next = curr_node.next
+        curr_node.next = new_node
+
+
+
+

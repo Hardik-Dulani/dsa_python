@@ -1,0 +1,13 @@
+Linked lists are a fundamental data structure in computer science that are used to store and manage collections of data. They are often used when we need to efficiently add or remove items from a collection, or when we don't know how many items we need to store beforehand.
+
+There are several advantages to using linked lists:
+
+Dynamic Size: Linked lists can grow or shrink dynamically as elements are added or removed, without requiring reallocation of memory like arrays. This makes them ideal for situations where the size of the data may change over time.
+
+Easy to Insert and Delete: Linked lists provide constant-time insertion and deletion operations at any position in the list, unlike arrays which require shifting elements when an item is inserted or removed from the middle of the array.
+
+Efficient Memory Management: Linked lists only allocate memory for the items in the list as they are added, making them more efficient in terms of memory usage compared to arrays.
+
+Flexibility: Linked lists can be implemented in a variety of ways, including singly linked lists, doubly linked lists, and circular linked lists. This gives developers the flexibility to choose the implementation that best fits their needs.
+
+Some common use cases for linked lists include implementing stacks, queues, and hash tables. They are also commonly used in operating systems, where they are used to manage memory allocation and process scheduling.
