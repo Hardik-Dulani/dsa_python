@@ -1,0 +1,25 @@
+Stacks are a fundamental data structure that follows the Last-In-First-Out (LIFO) principle. Elements are added and removed from the same end of the stack, known as the top. 
+
+Implementation:
+class Stack:
+    def __init__(self):
+        self.stack = []
+
+    def is_empty(self):
+        return len(self.stack) == 0
+
+    def push(self, item):
+        self.stack.append(item)
+
+    def pop(self):
+        if self.is_empty():
+            return "Stack is empty"
+        return self.stack.pop()
+
+    def peek(self):
+        if self.is_empty():
+            return "Stack is empty"
+        return self.stack[-1]
+
+    def size(self):
+        return len(self.stack)
