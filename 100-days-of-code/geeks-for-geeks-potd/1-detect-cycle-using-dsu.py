@@ -1,3 +1,6 @@
+# Given an undirected graph with no self loops with V (from 0 to V-1) nodes and E edges, 
+# the task is to check if there is any cycle in the undirected graph.
+# Note: Solve the problem using disjoint set union (DSU).
 class Solution:
 
     #Function to detect cycle using DSU in an undirected graph.
