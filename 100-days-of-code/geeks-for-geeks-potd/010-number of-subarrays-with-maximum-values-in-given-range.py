@@ -1,4 +1,4 @@
-# # Number of subarrays with maximum values in given range
+# Number of subarrays with maximum values in given range
 # Given an array of N elements and L and R, 
 # print the number of sub-arrays such that
 # the value of the maximum array element in that subarray is at least L and at most R.
