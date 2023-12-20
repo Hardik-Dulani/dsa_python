@@ -22,7 +22,6 @@ class Solution:
                     for y in range(max(0, j-1), min(cols, j+2)):
                         total_sum += img[x][y]
                         count += 1
-
                 result[i][j] = total_sum // count
 
         return result
